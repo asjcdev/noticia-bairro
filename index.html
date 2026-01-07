@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fake news sobre Pix faz vítimas na Baixada</title>
+    <style>
+      /* --- ESTILOS GERAIS --- */
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f8f8f8;
+      }
+
+      /* Cabeçalho G1/Globo */
+      .top-bar {
+        background-color: #fff;
+        padding: 8px 5%;
+        font-size: 14px;
+        font-weight: bold;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .globo-links span {
+        margin-right: 15px;
+        cursor: pointer;
+      }
+      .blue {
+        color: #0669de;
+      }
+      .red {
+        color: #c4170c;
+      }
+      .green {
+        color: #06aa48;
+      }
+      .orange {
+        color: #ff6700;
+      }
+      .g1-header {
+        background-color: #c4170c;
+        height: 55px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 5%;
+        color: white;
+      }
+      .menu-area {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+      }
+      .menu-text {
+        font-weight: bold;
+        font-size: 14px;
+        display: flex;
+        align-items: center;
+      }
+      .menu-icon {
+        font-size: 24px;
+        margin-right: 5px;
+      }
+      .g1-logo {
+        font-size: 32px;
+        font-weight: bold;
+        letter-spacing: -2px;
+      }
+      .section-title {
+        font-weight: 300;
+        font-size: 24px;
+        text-transform: uppercase;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+      .search-box {
+        background: rgba(0, 0, 0, 0.2);
+        padding: 5px 15px;
+        border-radius: 4px;
+        font-size: 12px;
+        font-weight: bold;
+      }
+
+      /* Container da Notícia */
+      .container {
+        max-width: 740px;
+        margin: 30px auto;
+        background: #fff;
+        padding: 40px;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+      }
+      .chapeu {
+        color: #c4170c;
+        font-weight: 700;
+        text-transform: uppercase;
+        font-size: 12px;
+        letter-spacing: 0.5px;
+        margin-bottom: 10px;
+      }
+      h1 {
+        color: #1a1a1a;
+        font-size: 34px;
+        line-height: 1.1;
+        margin-top: 0;
+        font-weight: 700;
+        letter-spacing: -0.5px;
+      }
+      h2 {
+        color: #555;
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 1.3;
+        margin-top: 15px;
+        margin-bottom: 25px;
+      }
+      .data {
+        color: #666;
+        font-size: 13px;
+        margin: 20px 0;
+        border-top: 1px solid #eee;
+        padding-top: 15px;
+      }
+
+      /* Fotos */
+      .figure-container {
+        max-width: 70%;
+        margin: 35px auto;
+        text-align: left;
+      }
+      .foto-destaque {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+      .legenda {
+        font-family: Arial, sans-serif;
+        font-size: 13px;
+        color: #555;
+        padding: 8px 0;
+        margin-top: 5px;
+        display: block;
+        border-bottom: 1px solid #eee;
+      }
+
+      /* Textos */
+      p {
+        font-family: Georgia, "Times New Roman", serif;
+        line-height: 1.8;
+        font-size: 18px;
+        color: #333;
+        margin-bottom: 25px;
+      }
+
+      /* Citação Destacada (Estilo G1) */
+      .destaque-texto {
+        font-family: Georgia, serif;
+        font-size: 22px;
+        font-style: italic;
+        color: #333;
+        background-color: transparent;
+        border-left: 4px solid #c4170c;
+        padding-left: 20px;
+        margin: 35px 0;
+        font-weight: normal;
+      }
+
+      /* --- ESTILO DO BOX DE LAMENTO (O OUTRO LADO) --- */
+      .box-lamento {
+        background-color: #f7f7f7; /* Cinza bem clarinho */
+        padding: 25px;
+        border-top: 1px solid #ddd;
+        border-bottom: 1px solid #ddd;
+        margin: 40px 0;
+      }
+      .box-lamento h3 {
+        font-family: Arial, sans-serif;
+        margin-top: 0;
+        color: #c4170c;
+        text-transform: uppercase;
+        font-size: 14px;
+        font-weight: bold;
+        margin-bottom: 20px;
+      }
+      .foto-entrevista {
+        width: 100%;
+        margin-bottom: 5px;
+        border: 1px solid #eee;
+      }
+      .entrevista-texto {
+        font-family: Georgia, serif;
+        font-style: italic;
+        font-size: 18px;
+        color: #444;
+        margin-bottom: 15px;
+      }
+
+      @media (max-width: 600px) {
+        .section-title {
+          display: none;
+        }
+        .container {
+          padding: 20px;
+        }
+        .figure-container {
+          max-width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="top-bar">
+      <div class="globo-links"><span class="blue">globo.com</span> <span class="red">g1</span> <span class="green">ge</span> <span class="orange">gshow</span> <span class="red">globoplay</span> <span class="blue">o globo</span></div>
+      <div style="color: #666">👤 Conta Globo</div>
+    </div>
+
+    <div class="g1-header">
+      <div class="menu-area">
+        <span class="menu-text"><span class="menu-icon">≡</span> MENU</span> <span class="g1-logo">g1</span>
+      </div>
+      <div class="section-title">ECONOMIA</div>
+      <div class="search-box">🔍 BUSCAR</div>
+    </div>
+
+    <div class="container">
+      <div class="chapeu">Economia & Cotidiano</div>
+
+      <h1>Fake news sobre 'Taxação do Pix' faz vítimas na Baixada: Motorista apaga chaves para fugir da malha fina</h1>
+
+      <h2>Morador de Nova Iguaçu tomou medida drástica após onda de anúncios falsos; transferências para amigos estão suspensas por "segurança fiscal".</h2>
+
+      <div class="data">
+        Por Redação • Rio de Janeiro <br />
+        07/01/2026 07:30
+      </div>
+
+      <div class="figure-container">
+        <img src="foto-alex.jpg" alt="Foto do Alex" class="foto-destaque" />
+        <span class="legenda">Alex Bruno tomando chop no shopping da Pedreira: Se diz preocupado com o Leão.</span>
+      </div>
+
+      <p>Golpistas aproveitaram a repercussão sobre uma suposta taxa de 27% em transferências via Pix para espalhar mais de 1.770 anúncios fraudulentos nas redes sociais nesta semana. A desinformação gerou pânico e levou contribuintes a tomarem medidas preventivas desnecessárias.</p>
+
+      <p>Em Nova Iguaçu (RJ), o motorista de aplicativo <strong>Alex Bruno</strong>, residente do Bairro Danon, foi uma das vítimas da confusão. Temendo cair na malha fina da Receita Federal, ele optou por excluir sua chave Pix (CPF) do sistema bancário.</p>
+
+      <p>Segundo o motorista, a medida visa controlar o teto de gastos e evitar riscos fiscais. A decisão impactou diretamente o orçamento doméstico e as relações pessoais:</p>
+
+      <p class="destaque-texto">"Decidi bloquear qualquer saída de capital. Infelizmente, não vou mais poder emprestar aqueles R$ 10,00 ao meu irmão de consideração, André Cunha. O risco de atingir o teto de isenção e ter que declarar o imposto é muito alto nesse cenário de incertezas", afirmou Alex à reportagem.</p>
+
+      <div class="box-lamento">
+        <h3>O Outro Lado: Repercussão</h3>
+
+        <img src="foto-niver.jpg" alt="André e Alex no aniversário" class="foto-entrevista" />
+        <span class="legenda">Arquivo Pessoal: André Cunha (dir.) junto a filha Laura e Alex Bruno (esq.).</span>
+
+        <p class="entrevista-texto" style="margin-top: 20px">Procurado pela reportagem, o amigo citado, <strong>André Cunha</strong>, lamentou profundamente a situação.</p>
+
+        <p class="entrevista-texto">"É triste ver como uma fake news não destrói apenas o mundo, mas interfere nos relacionamentos. Mas, independente de qualquer coisa, somos amigos. O Bruno é uma pessoa de ouro, meio cachaceiro, é verdade, mas tem bom coração."</p>
+
+        <p class="entrevista-texto">André ainda comentou sobre a vida pessoal do amigo em tom de desabafo: "Independente das preferências íntimas ou escolhas exóticas que ele possa vir a ter, eu continuarei amando ele. Só fico triste com essa atitude drástica de bloquear o Pix."</p>
+
+        <p class="entrevista-texto">Questionado sobre qual seria sua alternativa financeira sem o apoio de Alex, André foi enfático sobre as medidas desesperadas que terá que tomar:</p>
+
+        <p class="entrevista-texto">
+          <strong>"Infelizmente, vou ter que reativar contatos antigos que não me procuram mais. Terei que recorrer a figuras como Alan 'Bundinha', Tiago 'Piruzinho' e Fábio 'Perna de 3'. São linhas de crédito complicadas, mas é o que restou."</strong>
+        </p>
+      </div>
+
+      <p>Até o fechamento desta edição, a Receita Federal informou que não há previsão de taxação para transferências entre pessoas físicas.</p>
+    </div>
+  </body>
+</html>
